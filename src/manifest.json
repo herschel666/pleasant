@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Pleasant",
+  "version": "0.1.0",
+  "description": "Turns websites grayscale for a more pleasant experience.",
+  "icons": {
+    "48": "icons/pleasant-48.png",
+    "96": "icons/pleasant-96.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "all_frames": true,
+      "run_at": "document_end",
+      "js": ["pleasant.js"]
+    }
+  ]
+}
